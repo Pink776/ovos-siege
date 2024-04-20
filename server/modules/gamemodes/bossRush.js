@@ -53,46 +53,7 @@ class BossRush {
         this.bossChoices = [
             // [ cost , definition reference ],
 
-            //mysticals
-            [  1, "sorcerer"],
-            [  2, "summoner"],
-            [  2, "enchantress"],
-            [  2, "exorcistor"],
-            [  2, "shaman"],
-
-            //elites
-            [  2, "eliteDestroyer"],
-            [  2, "eliteGunner"],
-            [  2, "eliteSprayer"],
-            [  2, "eliteBattleship"],
-            [  2, "eliteSpawner"],
-            [  2, "eliteTrapGuard"],
-            [  2, "eliteSpinner"],
-            [  2, "eliteSkimmer"],
-
-            //nesters
-            [  3, "nestKeeper"],
-            [  3, "nestWarden"],
-            [  3, "nestGuardian"],
-
-            //terrestrials
-            [ 15, "ares"],
-            [ 15, "gersemi"],
-            [ 15, "ezekiel"],
-            [ 15, "eris"],
-            [ 15, "selene"],
-
-            //celestials
-            [ 35, "paladin"],
-            [ 35, "freyja"],
-            [ 35, "zaphkiel"],
-            [ 35, "nyx"],
-            [ 35, "theia"],
-
-            //eternals
-            [ 99, "legionaryCrasher" /*fucking mid*/],
-            [100, "kronos"],
-            [100, "odin"],
+          [1, "babyHeadder"],
         ];
         this.friendlyBossChoices = ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun"];

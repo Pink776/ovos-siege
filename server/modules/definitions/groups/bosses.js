@@ -2781,3 +2781,37 @@ for (let b = 0; b < 3; b++)
         POSITION: [8, 6, 5.6, 120 * b + 180, 180, 0],
         TYPE: "toothlessBossTurret",
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Baby Bosses
+
+Class.babyHeadder = {
+    PARENT: ["genericTank"],
+    LABEL: "Headder",
+  SHAPE: 6,
+  COLOR: "orange",
+  SIZE: 30,
+  HEALTH: 950,
+  SHIELD: 45,
+       GUNS: [
+        {
+            POSITION: [18, 6.5, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",               
+            },
+        },
+    ],
+};
+
