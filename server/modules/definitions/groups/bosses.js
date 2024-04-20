@@ -2797,13 +2797,17 @@ for (let b = 0; b < 3; b++)
 //Baby Bosses
 
 Class.babyHeadder = {
-    PARENT: ["genericTank"],
+    PARENT: ["miniboss"],
     LABEL: "Headder",
   SHAPE: 6,
+  VALUE: 5000,
   COLOR: "orange",
-  SIZE: 30,
+  BODY: {
+     SIZE: 30,
   HEALTH: 950,
   SHIELD: 45,
+  },
+
        GUNS: [
         {
             POSITION: [18, 6.5, 1, 0, 0, 0, 0],
@@ -2815,3 +2819,52 @@ Class.babyHeadder = {
     ],
 };
 
+Class.babyBedder = {
+    PARENT: ["miniboss"],
+    LABEL: "Bedder",
+  SHAPE: 6,
+  COLOR: "orange",
+   VALUE: 5000,
+  BODY: {
+     SIZE: 30,
+  HEALTH: 950,
+  SHIELD: 45,
+  },
+
+       GUNS: [
+        {
+            POSITION: [18, 6.5, 1.6, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "drone", MAX_CHILDREN: 4,               
+            },
+        },
+    ],
+};
+
+Class.babyCCedder = {
+    PARENT: ["miniboss"],
+    LABEL: "CCedder",
+  SHAPE: 6,
+  COLOR: "orange",
+   VALUE: 5000,
+  BODY: {
+     SIZE: 30,
+  HEALTH: 950,
+  SHIELD: 45,
+  },
+
+       GUNS: [
+        {
+            POSITION: [15, 7, 1, 0, 0, 0, 0]
+        },
+        {
+            POSITION: [3, 7, 1.7, 15, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.trap]),
+                TYPE: "trap",
+                STAT_CALCULATOR: gunCalcNames.trap           
+            },
+        },
+    ],
+};
