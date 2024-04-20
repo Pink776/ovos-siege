@@ -70,7 +70,7 @@ class BossRush {
 
     generateWaves() {
         let waves = [];
-        for (let i = 0; i < this.length; i++) {
+        for (let i = 1; i < this.length; i++) {
             let wave = [],
                 points = calculatePoints(i),
                 choices = this.bossChoices;
