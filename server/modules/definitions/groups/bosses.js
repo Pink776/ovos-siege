@@ -2883,7 +2883,7 @@ Class.babyUlreader = {
   },
 TURRETS: [
    	 {
-   		 POSITION: [16, 0, 0, 45, 0, 1],
+   		 POSITION: [16, 0, 0, 0, 0, 1],
    		 TYPE: 'sniper'
 },
   ],
@@ -2892,22 +2892,22 @@ TURRETS: [
 
 //baby shredders
 
-Class.basic = {
+Class.babyShredder = {
     PARENT: ["genericTank"],
-    LABEL: "Basic",
-  COLOR: "gray",
+    LABEL: "Baby Shredder",
+  COLOR: "grey",
   SIZE: 35,
+  VALUE: 6700,
   BODY: {
-    
-  }
-       GUNS: [
-        {
-            POSITION: [18, 8, 1, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic]),
-                TYPE: "bullet",               
-            },
-        },
+    HEALTH: 1730,
+    SHIELD: 45,
+    SPEED: 0.76,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [21.5, 0, 0, 0, 0, 1],
+   		 TYPE: 'spikeBody'
+     },
     ],
 };
 
