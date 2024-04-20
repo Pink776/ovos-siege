@@ -2893,7 +2893,7 @@ TURRETS: [
 //baby shredders
 
 Class.babyShredder = {
-    PARENT: ["genericTank"],
+    PARENT: ["miniboss"],
     LABEL: "Baby Shredder",
   COLOR: "grey",
   SIZE: 35,
