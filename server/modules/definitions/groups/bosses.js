@@ -2868,3 +2868,46 @@ Class.babyCCedder = {
         },
     ],
 };
+
+
+Class.babyUlreader = {
+    PARENT: ["miniboss"],
+    LABEL: "Ulreader",
+  SHAPE: 6,
+  COLOR: "orange",
+   VALUE: 5000,
+  BODY: {
+     SIZE: 30,
+  HEALTH: 950,
+  SHIELD: 45,
+  },
+TURRETS: [
+   	 {
+   		 POSITION: [16, 0, 0, 45, 0, 1],
+   		 TYPE: 'sniper'
+},
+  ],
+};
+
+
+//baby shredders
+
+Class.basic = {
+    PARENT: ["genericTank"],
+    LABEL: "Basic",
+  COLOR: "gray",
+  SIZE: 35,
+  BODY: {
+    
+  }
+       GUNS: [
+        {
+            POSITION: [18, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic]),
+                TYPE: "bullet",               
+            },
+        },
+    ],
+};
+
