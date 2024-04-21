@@ -2911,3 +2911,25 @@ Class.babyShredder = {
     ],
 };
 
+Class.babyAutoShredder = {
+    PARENT: ["miniboss"],
+    LABEL: "Baby Auto-Shredder",
+  COLOR: "grey",
+  SIZE: 35,
+  VALUE: 6700,
+  BODY: {
+    HEALTH: 1730,
+    SHIELD: 45,
+    SPEED: 0.76,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [21.5, 0, 0, 0, 0, 1],
+   		 TYPE: 'spikeBody'
+     },
+    {
+       POSITION: [9, 0, 0, 0, 0, 1],
+   		 TYPE: 'autoTankGun'
+     },
+    ],
+};
