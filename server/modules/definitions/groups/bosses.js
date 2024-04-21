@@ -2982,3 +2982,71 @@ Class.babyAuraShredder = {
      },
     ],
 };
+//baby summoners
+Class.babySummoner = {
+    PARENT: ["miniboss"],
+    LABEL: "Baby Summoner",
+    DANGER: 8,
+    SHAPE: 4,
+    COLOR: "gold",
+    UPGRADE_COLOR: "gold",
+    SIZE: 16,
+    MAX_CHILDREN: 28,
+    VALUE: 3e5,
+    BODY: {
+        FOV: 0.8,
+        SPEED: 0.3 * base.SPEED,
+        HEALTH: 3.5 * base.HEALTH,
+        DAMAGE: 1 * base.DAMAGE,
+    },
+    GUNS: Array(4).fill().map((_, i) => ({
+        POSITION: [3.5, 8.65, 1.2, 8, 0, i * 90, 0],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 0.8 }]),
+            TYPE: ["sunchip"],
+            AUTOFIRE: true,
+            SYNCS_SKILLS: true,
+            STAT_CALCULATOR: gunCalcNames.necro,
+            WAIT_TO_CYCLE: true,
+        },
+    }))
+};
+
+Class.autoBabySummoner = {
+    PARENT: ["miniboss"],
+    LABEL: "Auto-Baby Summoner",
+    DANGER: 8,
+    SHAPE: 4,
+    COLOR: "gold",
+    UPGRADE_COLOR: "gold",
+    SIZE: 16,
+    MAX_CHILDREN: 28,
+    VALUE: 3e5,
+    BODY: {
+        FOV: 0.8,
+        SPEED: 0.3 * base.SPEED,
+        HEALTH: 3.5 * base.HEALTH,
+        DAMAGE: 1 * base.DAMAGE,
+    },
+    GUNS: Array(4).fill().map((_, i) => ({
+        POSITION: [3.5, 8.65, 1.2, 8, 0, i * 90, 0],
+        PROPERTIES: {
+            SHOOT_SETTINGS: combineStats([g.drone, g.summoner, { size: 0.8 }]),
+            TYPE: ["sunchip"],
+            AUTOFIRE: true,
+            SYNCS_SKILLS: true,
+            STAT_CALCULATOR: gunCalcNames.necro,
+            WAIT_TO_CYCLE: true,
+         
+
+        },
+      
+    })),
+  TURRETS: [
+   	 {
+   		 POSITION: [20, 0, 0, 45, 0, 1],
+   		 TYPE: 'autoTankGun',
+     },
+    ],
+};
+
