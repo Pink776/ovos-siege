@@ -59,6 +59,7 @@ class BossRush {
           [1, "babyUlreader"],
           [1, "babyShredder"],
           [1, "babyAutoShredder"],
+          [1, "baby4AutoShredder"],
         ];
         this.friendlyBossChoices = ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun"];
