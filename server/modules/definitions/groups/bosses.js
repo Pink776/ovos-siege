@@ -2929,7 +2929,7 @@ Class.babyAutoShredder = {
      },
     {
        POSITION: [9, 0, 0, 0, 0, 1],
-   		 TYPE: 'autoTankGun'
+   		 TYPE: ['autoTankGun', { INDEPENDENT: true}],
      },
     ],
 };
