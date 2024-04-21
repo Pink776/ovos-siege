@@ -5,7 +5,6 @@ require('./generics.js');
 
 Class.miniboss = {
     PARENT: "genericBoss",
-    CONTROLLERS: ["nearestDifferentMaster", "minion", "canRepel"],
     AI: { NO_LEAD: true },
 };
 Class.ramMiniboss = {
@@ -2901,6 +2900,7 @@ Class.babyShredder = {
   BODY: {
     HEALTH: 1730,
     SHIELD: 45,
+    FOV: 3,
     SPEED: 0.76,
   },
   TURRETS: [
@@ -2920,6 +2920,7 @@ Class.babyAutoShredder = {
   BODY: {
     HEALTH: 1730,
     SHIELD: 45,
+    FOV: 3,
     SPEED: 0.76,
   },
   TURRETS: [
