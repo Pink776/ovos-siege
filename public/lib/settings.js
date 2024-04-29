@@ -1,7 +1,7 @@
 const settings = {
     graphical: {
         screenshotMode: false,
-        borderChunk: 6,
+        borderChunk: 3,
         barChunk: 4,
         mininumBorderChunk: 3,
         deathBlurAmount: 3,
@@ -17,7 +17,7 @@ const settings = {
     },
     lag: {
         unresponsive: false,
-        memory: 60
+        memory: 120
     },
     game: {
         autoLevelUp: false

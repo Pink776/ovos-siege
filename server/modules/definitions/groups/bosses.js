@@ -3050,3 +3050,29 @@ Class.autoBabySummoner = {
     ],
 };
 
+//Death Babies
+Class.babyDeath = {
+    PARENT: ["miniboss"],
+    LABEL: "Baby Death",
+  DANGER: 16,
+  SHAPE: 8,
+  COLOR: 'red',
+  SIZE: 19,
+  MAX_CHILDREN: 3,
+  VALUE: 7000,
+  BODY: {
+    HEALTH: 2200,
+    SHIELD: 25.09,
+  },
+       GUNS: [
+        {
+            POSITION: [18, 12.5, 1.6, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.pound, g.destroy, g.anni, {damage: 5.5, reload: 10}]),
+                TYPE: "drone",               
+            },
+        },
+    ],
+};
+
+
