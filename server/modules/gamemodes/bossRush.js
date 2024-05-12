@@ -61,9 +61,11 @@ class BossRush {
           [1, "babyAutoShredder"],
           [1, "baby4AutoShredder"],
           [1, "babyAuraShredder"],
+          [2, "babyIncost"],
           [2, "babySummoner"],
           [2, "autoBabySummoner"],
           [3, "babyDeath"],
+          [3, "babyDeathFordevist"],
         ];
         this.friendlyBossChoices = ["roguePalisade", "rogueArmada", "julius", "genghis", "napoleon"];
         this.bigFodderChoices = ["sentryGun", "sentrySwarm", "sentryTrap", "shinySentryGun"];

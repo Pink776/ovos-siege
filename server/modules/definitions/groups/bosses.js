@@ -23,16 +23,16 @@ Class.babyboss = {
   CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 };
 
-Class.babybossSVG = {
+Class.babybosscewwiSVG = {
   PARENT: "genericTank",
   COLOR: "darkGrey",
-  SHAPE: ""
+  SHAPE: "M 7 0 L -7 0 C -9 0 -10 -1 -10 -3 L -10 -40 C -10 -42 -9 -43 -7 -43 L 61 -43 C 63 -43 64 -42 64 -40 L 64 -36 C 62 -34 62 -31 64 -29 L 64 -25 C 64 -23 63 -22 61 -22 L 13 -22 C 11 -22 10 -21 10 -19 L 10 -3 C 10 -1 9 0 7 0 M 10 -14 C 20 -14 22 -18 22 -22 L 19 -22 C 18 -18 14 -17 10 -17"
 }
-Class.babyboss = {
+Class.babybosscewwi = {
   PARENT: "genericBabyBoss",
   CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
   PROPS: [{
-            POSITION: [11, 8, 0, 0, 190, 0],
+            POSITION: [0.1, 8, 0, 0, 190, 0],
             TYPE: "babybossSVG",
         },]
 };
@@ -4302,9 +4302,9 @@ Class.babyDeath = {
     },
   ],
 };
-Class.babyDeathFordev = {
+Class.babyDeathFordevist = {
   PARENT: ["babyboss"],
-  LABEL: "Baby Death Fordevis",
+  LABEL: "Baby Death Fordevist",
   DANGER: 16,
   SHAPE: 8,
   COLOR: "red",
@@ -4312,22 +4312,50 @@ Class.babyDeathFordev = {
   MAX_CHILDREN: 3,
   VALUE: 7000,
   BODY: {
-    HEALTH: 2200,
-    SHIELD: 25.09,
+    HEALTH: 2169,
+    SHIELD: 26.09,
   },
   GUNS: [
     {
-      POSITION: [18, 12.5, 1.6, 0, 0, 0, 0],
+      POSITION: [18, 14.5, 1.6, 0, 0, 0, 0],
       PROPERTIES: {
         SHOOT_SETTINGS: combineStats([
           g.basic,
           g.pound,
           g.destroy,
           g.anni,
-          { damage: 5.5, reload: 10 },
+          { damage: 8.5, reload: 14 },
         ]),
         TYPE: "drone",
       },
     },
   ],
+};
+//baby Incost
+Class.babyIncost = {
+    PARENT: ["babyboss"],
+    LABEL: "Baby Incost",
+  SHAPE: -4,
+  COLOR: "cyan",
+  SIZE: 23,
+  BODY: {
+    HEALTH: 880,
+    SHIELD: 100,
+  },
+       GUNS: [
+        {
+            POSITION: [24, 8, 1, 0, 0, 0, 0],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.hunter, g.hunterSecondary]),
+                TYPE: "bullet"
+            }
+        },
+        {
+            POSITION: [21, 12, 1, 0, 0, 0, 0.25],
+            PROPERTIES: {
+                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.hunter]),
+                TYPE: "bullet"            
+            },
+        },
+    ],
 };
