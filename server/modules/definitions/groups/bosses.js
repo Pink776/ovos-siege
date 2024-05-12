@@ -2799,7 +2799,7 @@ for (let b = 0; b < 3; b++)
 //Baby Bosses
 
 Class.babyHeadder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Headder",
   SHAPE: 6,
   VALUE: 5000,
@@ -2822,7 +2822,7 @@ Class.babyHeadder = {
 };
 
 Class.babyBedder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Bedder",
   SHAPE: 6,
   COLOR: "orange",
@@ -2845,7 +2845,7 @@ Class.babyBedder = {
 };
 
 Class.babyCCedder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "CCedder",
   SHAPE: 6,
   COLOR: "orange",
@@ -2873,7 +2873,7 @@ Class.babyCCedder = {
 
 
 Class.babyUlreader = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Ulreader",
   SHAPE: 6,
   COLOR: "orange",
@@ -2895,7 +2895,7 @@ TURRETS: [
 //baby shredders
 
 Class.babyShredder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby Shredder",
   COLOR: "grey",
   SIZE: 35,
@@ -2915,7 +2915,7 @@ Class.babyShredder = {
 };
 
 Class.babyAutoShredder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby Auto-Shredder",
   COLOR: "grey",
   SIZE: 35,
@@ -2938,7 +2938,7 @@ Class.babyAutoShredder = {
     ],
 };
 Class.baby4AutoShredder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby 4-Auto-Shredder",
   COLOR: "grey",
   SIZE: 35,
@@ -2964,7 +2964,7 @@ Class.baby4AutoShredder = {
 
 Class.shredderaura = addAura(6, 1);
 Class.babyAuraShredder = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby Aura Shredder",
   COLOR: "grey",
   SIZE: 35,
@@ -2987,7 +2987,7 @@ Class.babyAuraShredder = {
 };
 //baby summoners
 Class.babySummoner = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby Summoner",
     DANGER: 8,
     SHAPE: 4,
@@ -3016,7 +3016,7 @@ Class.babySummoner = {
 };
 
 Class.autoBabySummoner = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Auto-Baby Summoner",
     DANGER: 8,
     SHAPE: 4,
@@ -3055,7 +3055,7 @@ Class.autoBabySummoner = {
 
 //Death Babies
 Class.babyDeath = {
-    PARENT: ["miniboss"],
+    PARENT: ["babyboss"],
     LABEL: "Baby Death",
   DANGER: 16,
   SHAPE: 8,
