@@ -24,32 +24,45 @@ Class.babyboss = {
 };
 
 Class.babybosscewwiSVG = {
-    PARENT: "genericTank",
-    LABEL: "",
-    BODY: {
-        FOV: 3,
+  PARENT: "genericTank",
+  LABEL: "",
+  BODY: {
+    FOV: 3,
+  },
+  COLOR: "darkGrey",
+  SHAPE:
+    "M 7 0 L -7 0 C -9 0 -10 -1 -10 -3 L -10 -40 C -10 -42 -9 -43 -7 -43 L 61 -43 C 63 -43 64 -42 64 -40 L 64 -36 C 62 -34 62 -31 64 -29 L 64 -25 C 64 -23 63 -22 61 -22 L 13 -22 C 11 -22 10 -21 10 -19 L 10 -3 C 10 -1 9 0 7 0 M 10 -14 C 20 -14 22 -18 22 -22 L 19 -22 C 18 -18 14 -17 10 -17",
+  CONTROLLERS: [
+    "canRepel",
+    "onlyAcceptInArc",
+    "mapAltToFire",
+    "nearestDifferentMaster",
+  ],
+  GUNS: [
+    {
+      POSITION: [22, 5, 1, -20, -20, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.flankGuard,
+          g.autoTurret,
+          { reload: 0.2, speed: 1.5, spray: 2, size: 10 },
+        ]),
+        TYPE: "bullet",
+        ALPHA: 0,
+      },
     },
-   COLOR: "darkGrey",
-   SHAPE: "M 7 0 L -7 0 C -9 0 -10 -1 -10 -3 L -10 -40 C -10 -42 -9 -43 -7 -43 L 61 -43 C 63 -43 64 -42 64 -40 L 64 -36 C 62 -34 62 -31 64 -29 L 64 -25 C 64 -23 63 -22 61 -22 L 13 -22 C 11 -22 10 -21 10 -19 L 10 -3 C 10 -1 9 0 7 0 M 10 -14 C 20 -14 22 -18 22 -22 L 19 -22 C 18 -18 14 -17 10 -17",
-    CONTROLLERS: ["canRepel", "onlyAcceptInArc", "mapAltToFire", "nearestDifferentMaster"],
-    GUNS: [
-        {
-            POSITION: [22, 5, 1, -20, -20, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.flankGuard, g.autoTurret, {reload: 0.2, speed: 1.5, spray: 2, size: 10}]),
-                TYPE: "bullet",
-                ALPHA: 0,
-            },
-        },
-    ],
-}
+  ],
+};
 Class.babybosscewwi = {
   PARENT: "genericBabyBoss",
   CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
-  TURRETS: [{
-            POSITION: [1.5, , 0, 0, 360, 0],
-            TYPE: "babybosscewwiSVG",
-        },]
+  TURRETS: [
+    {
+      POSITION: [1.5, , 0, 0, 360, 0],
+      TYPE: "babybosscewwiSVG",
+    },
+  ],
 };
 // ELITE CRASHERS
 Class.elite = {
@@ -1645,15 +1658,7 @@ freyja.addLayer(
 );
 
 // ZAPHKIEL
-let zaphkiel = new LayeredBoss(
-  null,
-  "Zaphkiel",
-  "celestial",
-  9,
-  "orange",
-  "baseTrapTurret",
-  6.5,
-  5.5
+let zaphkiel = new LayeredBoss(null, "Zaphkiel", "celestial", 9, "orange", "baseTrapTurret", 6.5, 5.5
 );
 zaphkiel.addLayer(
   {
@@ -1681,6 +1686,57 @@ zaphkiel.addLayer(
   true,
   6
 );
+//Eradio
+let eradio = new LayeredBoss(null, "Eradio", "celestial", 9, "purple", "baseTrapTurret", 6.5, 5.5);
+eradio.addLayer(
+  {
+    gun: {
+      POSITION: [3.8, 6, 1.4, 8, 0, null, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+        TYPE: ["drone", { INDEPENDENT: true }],
+        AUTOFIRE: true,
+        SYNCS_SKILLS: true,
+      },
+    },
+  },
+  true,
+  null,
+  16
+);
+eradio.addLayer(
+  {
+    turret: {
+      POSITION: [10, 7.5, 0, null, 160, 0],
+      TYPE: ["sniper", { COLOR: "grey", INDEPENDENT: true }],
+    },
+  },
+  true,
+  6
+);
+//Lidio
+let lidio = new LayeredBoss(null, "Lidio", "celestial", 9,  "cyan", "baseTrapTurret", 6.5, 5.5);
+lidio.addLayer(
+  {
+    turret: {
+      POSITION: [7, 9, 0, null, 160, 0],
+      TYPE: ["autoTankGun", { COLOR: "grey", INDEPENDENT: true }],
+    },
+  },
+  true,
+  6
+  );
+lidio.addLayer(
+  {
+    turret: {
+      POSITION: [10.5, 8, 0, null, 160, 0],
+      TYPE: ["autoTankGun", { COLOR: "grey", INDEPENDENT: true }],
+    },
+  },
+  true,
+  6
+);
+
 
 // NYX
 let nyx = new LayeredBoss(
@@ -4349,8 +4405,8 @@ Class.babyDeathFordevist = {
 //baby Incost
 
 Class.babyIncost = {
-    PARENT: ["babyboss"],
-    LABEL: "Baby Incost",
+  PARENT: ["babyboss"],
+  LABEL: "Baby Incost",
   SHAPE: -4,
   COLOR: "cyan",
   SIZE: 23,
@@ -4358,91 +4414,94 @@ Class.babyIncost = {
     HEALTH: 880,
     SHIELD: 100,
   },
-       GUNS: [
-        {
-            POSITION: [24, 8, 1, 0, 0, 0, 0],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.hunter, g.hunterSecondary]),
-                TYPE: "bullet"
-            }
-        },
-        {
-            POSITION: [21, 12, 1, 0, 0, 0, 0.25],
-            PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.hunter]),
-                TYPE: "bullet"            
-            },
-        },
-    ],
+  GUNS: [
+    {
+      POSITION: [24, 8, 1, 0, 0, 0, 0],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([
+          g.basic,
+          g.sniper,
+          g.hunter,
+          g.hunterSecondary,
+        ]),
+        TYPE: "bullet",
+      },
+    },
+    {
+      POSITION: [21, 12, 1, 0, 0, 0, 0.25],
+      PROPERTIES: {
+        SHOOT_SETTINGS: combineStats([g.basic, g.sniper, g.hunter]),
+        TYPE: "bullet",
+      },
+    },
+  ],
 };
 Class.autoBabyIncost = makeAuto(Class.babyIncost, "Auto-Baby Incost");
-
 
 //baby Blossom
 
 Class.babyBlossom = {
-    PARENT: ["babyboss"],
-    LABEL: "Baby Blossom",
+  PARENT: ["babyboss"],
+  LABEL: "Baby Blossom",
   COLOR: "magenta",
   SIZE: 30,
   BODY: {
-  HEALTH: 998,
+    HEALTH: 998,
   },
   TURRETS: [
-   	 {
-   		 POSITION: [16, 0, 0, 0, 0, 1],
-   		 TYPE: 'autoTankGun',  AUTOFIRE: true,
-       
-     },
-   ],
+    {
+      POSITION: [16, 0, 0, 0, 0, 1],
+      TYPE: "autoTankGun",
+      AUTOFIRE: true,
+    },
+  ],
 };
 Class.babyBlossomCasra = {
-    PARENT: ["babyboss"],
-    LABEL: "Baby Blossom Casra",
+  PARENT: ["babyboss"],
+  LABEL: "Baby Blossom Casra",
   COLOR: "magenta",
   SIZE: 30,
   BODY: {
-  HEALTH: 998,
+    HEALTH: 998,
   },
   TURRETS: [
-   	 {
-   		 POSITION: [16, 0, 0, 0, 0, 1],
-   		 TYPE: 'basic',  AUTOFIRE: true,
-       
-     },
-   ],
+    {
+      POSITION: [16, 0, 0, 0, 0, 1],
+      TYPE: "basic",
+      AUTOFIRE: true,
+    },
+  ],
 };
 Class.babyBlossomPupeca = {
-    PARENT: ["babyboss"],
-    LABEL: "Baby Blossom Pupeca",
+  PARENT: ["babyboss"],
+  LABEL: "Baby Blossom Pupeca",
   COLOR: "magenta",
   SIZE: 30,
   BODY: {
-  HEALTH: 998,
+    HEALTH: 998,
   },
   TURRETS: [
-   	 {
-   		 POSITION: [16, 0, 0, 0, 0, 1],
-   		 TYPE: 'twin', AUTOFIRE: true,
-       
-     },
-   ],
+    {
+      POSITION: [16, 0, 0, 0, 0, 1],
+      TYPE: "twin",
+      AUTOFIRE: true,
+    },
+  ],
 };
 
 Class.babyBlossomCosratecra = {
-    PARENT: ["babyboss"],
-    LABEL: "Baby Blossom Cosratecra",
+  PARENT: ["babyboss"],
+  LABEL: "Baby Blossom Cosratecra",
   COLOR: "magenta",
   SIZE: 30,
   BODY: {
-  HEALTH: 998,
+    HEALTH: 998,
   },
   TURRETS: [
-   	 {
-   		 POSITION: [16, 0, 0, 0, 0, 1],
-   		 TYPE: '', AUTOFIRE: true,
-       
-     },
-   ],
+    {
+      POSITION: [16, 0, 0, 0, 0, 1],
+      TYPE: "bulwark",
+      AUTOFIRE: true,
+    },
+  ],
 };
-
