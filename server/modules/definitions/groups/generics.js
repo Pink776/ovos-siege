@@ -160,6 +160,29 @@ Class.genericBoss = {
     BROADCAST_MESSAGE: "A visitor has left!",
     BODY: { PUSHABILITY: 0.05 }
 }
+Class.genericBabyBoss = {
+    PARENT: "genericTank",
+    TYPE: "miniboss",
+    DANGER: 6,
+    SKILL: skillSet({
+        rld: 0.6,
+        dam: 0.25,
+        pen: 0.6,
+        str: 0.5,
+        spd: 0.15,
+        atk: 0.2,
+        hlt: 0.85,
+        shi: 0.4,
+        rgn: 0.3,
+        mob: 0,
+    }),
+    LEVEL: 45,
+    CONTROLLERS: ["nearestDifferentMaster", "canRepel"],
+    FACING_TYPE: ['spin', {speed: 0.035}],
+    HITS_OWN_TYPE: "hardOnlyBosses",
+    BROADCAST_MESSAGE: "A Baby has left!",
+    BODY: { PUSHABILITY: 0.05 }
+}
 
 Class.food = {
     TYPE: "food",

@@ -11,7 +11,10 @@ Class.ramMiniboss = {
     PARENT: "genericBoss",
     CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
 };
-
+Class.babyboss = {
+  PARENT: "genericBabyBoss",
+   CONTROLLERS: ["nearestDifferentMaster", "canRepel", "mapTargetToGoal"],
+};
 // ELITE CRASHERS
 Class.elite = {
     PARENT: ["miniboss"],
