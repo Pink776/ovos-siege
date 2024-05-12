@@ -58,6 +58,7 @@ class BossRush {
           [1, "babyCCedder"],
           [1, "babyUlreader"],
           [1, "babyShredder"],
+          [1, "babyBlossom"],
           [1, "babyAutoShredder"],
           [1, "baby4AutoShredder"],
           [1, "babyAuraShredder"],

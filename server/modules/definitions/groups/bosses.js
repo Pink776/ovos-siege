@@ -4347,6 +4347,7 @@ Class.babyDeathFordevist = {
   ],
 };
 //baby Incost
+
 Class.babyIncost = {
     PARENT: ["babyboss"],
     LABEL: "Baby Incost",
@@ -4374,4 +4375,24 @@ Class.babyIncost = {
         },
     ],
 };
+Class.autoBabyIncost = makeAuto(Class.babyIncost, "Auto-Baby Incost");
 
+
+//baby Blossom
+
+Class.babyBlossom = {
+    PARENT: ["babyboss"],
+    LABEL: "Baby Blossom",
+  COLOR: "magenta",
+  SIZE: 30,
+  BODY: {
+  HEALTH: 998,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [16, 0, 0, 0, 0, 1],
+   		 TYPE: 'autoTankGun',
+       
+     },
+   ],
+};
