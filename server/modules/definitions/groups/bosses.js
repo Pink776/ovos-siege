@@ -4391,8 +4391,58 @@ Class.babyBlossom = {
   TURRETS: [
    	 {
    		 POSITION: [16, 0, 0, 0, 0, 1],
-   		 TYPE: 'autoTankGun',
+   		 TYPE: 'autoTankGun',  AUTOFIRE: true,
        
      },
    ],
 };
+Class.babyBlossomCasra = {
+    PARENT: ["babyboss"],
+    LABEL: "Baby Blossom Casra",
+  COLOR: "magenta",
+  SIZE: 30,
+  BODY: {
+  HEALTH: 998,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [16, 0, 0, 0, 0, 1],
+   		 TYPE: 'basic',  AUTOFIRE: true,
+       
+     },
+   ],
+};
+Class.babyBlossomPupeca = {
+    PARENT: ["babyboss"],
+    LABEL: "Baby Blossom Pupeca",
+  COLOR: "magenta",
+  SIZE: 30,
+  BODY: {
+  HEALTH: 998,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [16, 0, 0, 0, 0, 1],
+   		 TYPE: 'twin', AUTOFIRE: true,
+       
+     },
+   ],
+};
+
+Class.babyBlossomCosratecra = {
+    PARENT: ["babyboss"],
+    LABEL: "Baby Blossom Cosratecra",
+  COLOR: "magenta",
+  SIZE: 30,
+  BODY: {
+  HEALTH: 998,
+  },
+  TURRETS: [
+   	 {
+   		 POSITION: [16, 0, 0, 0, 0, 1],
+   		 TYPE: '', AUTOFIRE: true,
+       
+     },
+   ],
+};
+
