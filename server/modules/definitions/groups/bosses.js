@@ -1730,7 +1730,7 @@ lidio.addLayer(
   {
     turret: {
       POSITION: [10.5, 8, 0, null, 160, 0],
-      TYPE: ["autoTankGun", { COLOR: "grey", INDEPENDENT: true }],
+      TYPE: ["twin", { COLOR: "grey", INDEPENDENT: true }],
     },
   },
   true,
